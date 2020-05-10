@@ -27,12 +27,15 @@ repositories {
 }
 
 dependencies {
+    // Spring Boot
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    // DB client
     implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
 
-
+    // 3rd party
     compile('org.projectlombok:lombok')
     compile('com.h2database:h2')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
