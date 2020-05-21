@@ -15,13 +15,16 @@ public class MailService {
 
     private final JavaMailSender mailSender;
 
-    public void sendMail(String subject, String text, String from, String to){
+    public void sendMail(String to){
         MimeMessage message = mailSender.createMimeMessage();
+        String subject = "제목";
+        String text = "<button>버튼</button>";
+        String from = "contactdongdong@gmail.com";
 
         try {
             MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");
             messageHelper.setSubject(subject);
-            messageHelper.setText(text);
+            messageHelper.setText(text, true);
             messageHelper.setFrom(from);
             messageHelper.setTo(to);
 
