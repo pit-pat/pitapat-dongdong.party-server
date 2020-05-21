@@ -4,3 +4,4 @@
 build
 
 application-db-config.properties
+mail.properties
